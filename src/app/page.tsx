@@ -9,13 +9,10 @@ export default function Home() {
 
       <div className="relative flex flex-col">
         {/* <div className=" before:absolute before:h-[500px] before:w-[780px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[560px] after:w-[540px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[490px]" /> */}
-        <div className="w-full md:max-w-md bg-black bg-opacity-50">
-          <h1 className="text-4xl sm:text-6xl mb-6 font-semibold">Send app</h1>
-          <h2 className="text-xl sm:text-2xl mb-8">
-            Crypto Simplified: <b>Send</b> and receive instantly with just a
-            phone number.
-          </h2>
-          <div className="flex  gap-4">
+        <div className="w-full md:max-w-md bg-black bg-opacity-50 justify-center">
+          <h1 className="text-4xl sm:text-6xl mb-6 font-semibold">Send</h1>
+
+          <div className="flex justify-center gap-4">
             <a href="https://t.co/hr2OkXj0eZ" className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
