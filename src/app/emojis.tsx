@@ -91,6 +91,11 @@ const emojis: EmojiContent[] = [
   "Ultra-sound money!",
   "Bling bling!",
   "Cha-ching!",
+  "To da moon",
+  "Up only",
+  "Big green dildo",
+  "Future of France",
+  "Full send",
   ...Array(20).fill(ethLogo), // Add f-ton eth logos
 ];
 
