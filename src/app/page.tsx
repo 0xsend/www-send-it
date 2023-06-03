@@ -14,7 +14,7 @@ export default function Home() {
             Send
           </h1>
 
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4 mb-8">
             <a href="https://t.co/hr2OkXj0eZ" className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,6 +42,8 @@ export default function Home() {
               </svg>
             </a>
           </div>
+
+          <p className="font-thin font-mono">Contract address: coming soon.</p>
         </div>
       </div>
 
