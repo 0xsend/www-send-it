@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import tailwindConfig from "../../tailwind.config.js";
 
-const emojis = [
+type EmojiContent = string | ReactElement;
+
+const emojis: EmojiContent[] = [
   "💸",
   "💵",
   "💰",
@@ -40,20 +42,62 @@ const emojis = [
   "All about the Benjamins!",
   "Bling bling!",
   "Ka-ching!",
+  (
+    <svg viewBox="0 0 115 182" className="w-6">
+      <path
+        d="M57.5054 181V135.84L1.64064 103.171L57.5054 181Z"
+        fill="#F0CDC2"
+        stroke="#1616B4"
+        strokeLinejoin="round"
+      ></path>
+      <path
+        d="M57.6906 181V135.84L113.555 103.171L57.6906 181Z"
+        fill="#C9B3F5"
+        stroke="#1616B4"
+        strokeLinejoin="round"
+      ></path>
+      <path
+        d="M57.5055 124.615V66.9786L1 92.2811L57.5055 124.615Z"
+        fill="#88AAF1"
+        stroke="#1616B4"
+        strokeLinejoin="round"
+      ></path>
+      <path
+        d="M57.6903 124.615V66.9786L114.196 92.2811L57.6903 124.615Z"
+        fill="#C9B3F5"
+        stroke="#1616B4"
+        strokeLinejoin="round"
+      ></path>
+      <path
+        d="M1.00006 92.2811L57.5054 1V66.9786L1.00006 92.2811Z"
+        fill="#F0CDC2"
+        stroke="#1616B4"
+        strokeLinejoin="round"
+      ></path>
+      <path
+        d="M114.196 92.2811L57.6906 1V66.9786L114.196 92.2811Z"
+        fill="#B8FAF6"
+        stroke="#1616B4"
+        strokeLinejoin="round"
+      ></path>
+    </svg>
+  ) as ReactElement,
 ];
 
 const colors = tailwindConfig.emojiColors;
 
-const getRandomEmoji = () => emojis[Math.floor(Math.random() * emojis.length)];
-const getRandomDuration = () => Math.random() * 5 + 5; // Random duration between 5 and 10 seconds
-const getRandomLeftPosition = () => Math.random() * 70 + 10; // Random left position between 10 and 80%
-const getRandomRotation = () => Math.random() * 100 - 50; // Random rotation between -50 and 50 degrees
-const getFontSize = (emoji: string) => (emoji.length > 2 ? "1rem" : "2rem");
+const getRandomContent = () =>
+  emojis[Math.floor(Math.random() * emojis.length)];
+const getRandomDuration = () => Math.random() * 10 + 7; // Random duration between 7 and 17 seconds
+const getRandomLeftPosition = () => Math.random() * 90 + 5; // Random left position between 5 and 95%
+const getRandomRotation = () => Math.random() * 60 - 30; // Random rotation between -50 and 50 degrees
+const getFontSize = (emoji: EmojiContent) =>
+  emoji.toString().length > 2 ? "1rem" : "2rem";
 const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)];
 
 type EmojiState = {
   id: number;
-  emoji: string;
+  content: EmojiContent;
   left: number;
   rotation: number;
   color: string;
@@ -62,14 +106,20 @@ type EmojiState = {
 };
 
 type EmojiProps = {
-  emoji: string;
+  content: EmojiContent;
   left: number;
   rotation: number;
   color: string;
   duration: number;
 };
 
-const Emoji = ({ emoji, left, rotation, color, duration }: EmojiProps) => {
+const Emoji = ({
+  content: emoji,
+  left,
+  rotation,
+  color,
+  duration,
+}: EmojiProps) => {
   const fontSize = getFontSize(emoji);
   return (
     <div
@@ -79,7 +129,7 @@ const Emoji = ({ emoji, left, rotation, color, duration }: EmojiProps) => {
       }}
       style={{
         position: "fixed",
-        top: -50,
+        top: -70,
         left: `${left}%`,
         animation: `float ${duration}s linear`,
         fontSize,
@@ -108,7 +158,7 @@ export const Emojis = () => {
         ),
         {
           id: Math.random(), // Unique id for key prop
-          emoji: getRandomEmoji(),
+          content: getRandomContent(),
           left: getRandomLeftPosition(),
           rotation: getRandomRotation(),
           color: getRandomColor(),
@@ -132,10 +182,10 @@ export const Emojis = () => {
 
   return (
     <>
-      {emojis.map(({ id, emoji, left, rotation, color, duration }) => (
+      {emojis.map(({ id, content, left, rotation, color, duration }) => (
         <Emoji
           key={id}
-          emoji={emoji}
+          content={content}
           left={left}
           rotation={rotation}
           color={color}
