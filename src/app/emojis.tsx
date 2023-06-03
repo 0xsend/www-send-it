@@ -45,9 +45,9 @@ const emojis = [
 const colors = tailwindConfig.emojiColors;
 
 const getRandomEmoji = () => emojis[Math.floor(Math.random() * emojis.length)];
-const getRandomDuration = () => Math.random() * 5 + 3; // Random duration between 3 and 8 seconds
-const getRandom100 = () => Math.random() * 100; // Random left position between 0 and 100%
-const getRandomRotation = () => Math.random() * 120 - 60; // Random rotation between -60 and 60 degrees
+const getRandomDuration = () => Math.random() * 5 + 5; // Random duration between 5 and 10 seconds
+const getRandomLeftPosition = () => Math.random() * 70 + 10; // Random left position between 10 and 80%
+const getRandomRotation = () => Math.random() * 100 - 50; // Random rotation between -50 and 50 degrees
 const getFontSize = (emoji: string) => (emoji.length > 2 ? "1rem" : "2rem");
 const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)];
 
@@ -109,8 +109,7 @@ export const Emojis = () => {
         {
           id: Math.random(), // Unique id for key prop
           emoji: getRandomEmoji(),
-          top: getRandom100(),
-          left: getRandom100(),
+          left: getRandomLeftPosition(),
           rotation: getRandomRotation(),
           color: getRandomColor(),
           duration: getRandomDuration(),

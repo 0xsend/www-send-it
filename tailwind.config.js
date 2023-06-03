@@ -1,29 +1,16 @@
 const colors = [
-  "slate",
-  "gray",
-  "zinc",
-  "neutral",
-  "stone",
   "red",
   "orange",
-  "amber",
   "yellow",
-  "lime",
   "green",
-  "emerald",
-  "teal",
-  "cyan",
-  "sky",
   "blue",
   "indigo",
-  "violet",
   "purple",
-  "fuchsia",
   "pink",
-  "rose",
+  "gray",
 ];
 
-const shades = ["500", "600", "700", "800", "900"];
+const shades = ["300", "400", "500"];
 
 const emojiColors = [
   ...colors.flatMap((color) => shades.map((shade) => `text-${color}-${shade}`)),
