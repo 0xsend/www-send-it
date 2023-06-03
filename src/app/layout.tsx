@@ -7,7 +7,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Send app - pay and get paid",
+  title: "Send App - Pay and Get Paid with Crypto",
   description:
     "Crypto Simplified: Pay and Get Paid with Send App. Send and receive crypto instantly with just a phone number.",
 };
