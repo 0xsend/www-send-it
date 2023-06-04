@@ -14,9 +14,8 @@ const sourceCodePro = Source_Code_Pro({
 });
 
 export const metadata = {
-  title: "Send App - Pay and Get Paid with Crypto",
-  description:
-    "Crypto Simplified: Pay and Get Paid with Send App. Send and receive crypto instantly with just a phone number.",
+  title: "Send",
+  description: "It's not the size, it's how you Send it",
 };
 
 export default function RootLayout({

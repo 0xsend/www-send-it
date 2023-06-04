@@ -46,7 +46,7 @@ const ethLogo = (
   </svg>
 ) as ReactElement;
 
-const emojis: EmojiContent[] = [
+const emojis = [
   "📈",
   "💵",
   "💰",
@@ -71,11 +71,19 @@ const emojis: EmojiContent[] = [
   "⬆️",
   "🔜",
   "🆙",
+];
+
+const phrases: EmojiContent[] = [
+  ...emojis, // more emojissss
+  ...emojis, // more emojissss
+  ...emojis, // more emojissss
+  ...emojis, // more emojissss
+  ...emojis, // more emojissss
   "Send it!",
   "Cha-ching!",
   "Price is right!",
   "Crypto Queen!",
-  "1 $send = 1 $send",
+  "1 $SEND = 1 $SEND",
   "Makin it rain!",
   "Pay day!",
   "Green Only",
@@ -95,14 +103,42 @@ const emojis: EmojiContent[] = [
   "Up only",
   "Big green dildo",
   "Future of France",
-  "Full send",
-  ...Array(20).fill(ethLogo), // Add f-ton eth logos
+  "Full Send",
+  "Respect the pamp",
+  "Funds are safu",
+  "Hodl",
+  "Sedn",
+  "Buidl",
+  "wagmi",
+  "wagsi (we all gonna Send it)",
+  "Send fren",
+  "Send to me web3",
+  "wen Send",
+  "Send it like kek-ham",
+  "pamp it",
+  "Load the pump",
+  "F*ck fiat",
+  "Whales are watching",
+  "Fill your bags",
+  "Shill your bags",
+  "Wen moon",
+  "Wen binance",
+  "JEETS",
+  "Printer go brrrrr",
+  "Send me daddy",
+  "Don't pay it, Send it",
+  "why lend when you can Send",
+  "Smol Send, big Send, just Send",
+  "Giga-Send",
+  "F*** Ben, Send to a fren",
+  "It's not the size it's how you Send it",
+  ...Array(40).fill(ethLogo), // Add f-ton eth logos
 ];
 
 const colors = tailwindConfig.emojiColors;
 
 const getRandomContent = () =>
-  emojis[Math.floor(Math.random() * emojis.length)];
+  phrases[Math.floor(Math.random() * phrases.length)];
 const getRandomDuration = () => Math.random() * 10 + 7; // Random duration between 7 and 17 seconds
 const getRandomLeftPosition = () => Math.random() * 90 + 5; // Random left position between 5 and 95%
 const getRandomRotation = () => Math.random() * 60 - 30; // Random rotation between -50 and 50 degrees
