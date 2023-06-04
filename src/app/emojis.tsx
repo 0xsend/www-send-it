@@ -77,8 +77,6 @@ const phrases: EmojiContent[] = [
   ...emojis, // more emojissss
   ...emojis, // more emojissss
   ...emojis, // more emojissss
-  ...emojis, // more emojissss
-  ...emojis, // more emojissss
   "Send it!",
   "Cha-ching!",
   "Price is right!",
