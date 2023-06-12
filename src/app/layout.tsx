@@ -1,5 +1,11 @@
 import "./globals.css";
-import { Poppins, Source_Code_Pro } from "next/font/google";
+import { Poppins, Inter, Source_Code_Pro } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
+});
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${poppins.variable} ${sourceCodePro.variable}`}
+      className={`dark ${poppins.variable} ${sourceCodePro.variable} ${inter.variable}`}
     >
       <body>{children}</body>
     </html>

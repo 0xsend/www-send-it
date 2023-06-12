@@ -2,8 +2,27 @@
 
 import { ReactElement, useEffect, useState } from "react";
 import tailwindConfig from "../../tailwind.config.js";
+import Image from "next/image.js";
 
 type EmojiContent = string | ReactElement;
+
+const sendAppLogo = (
+  <Image
+    src="/img/logos/S_whitetransparent.png"
+    width={50}
+    height={50}
+    alt="Send App"
+  />
+);
+
+const sendTokenLogo = (
+  <Image
+    src="/img/logos/S_greentransparent.png"
+    width={50}
+    height={50}
+    alt="Send Token"
+  />
+);
 
 const ethLogo = (
   <svg viewBox="0 0 115 182" className="w-6">
@@ -131,6 +150,8 @@ const phrases: EmojiContent[] = [
   "F*** Ben, Send to a fren",
   "It's not the size it's how you Send it",
   ...Array(40).fill(ethLogo), // Add f-ton eth logos
+  ...Array(20).fill(sendAppLogo),
+  ...Array(20).fill(sendTokenLogo),
 ];
 
 const colors = tailwindConfig.emojiColors;
