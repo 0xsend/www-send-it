@@ -3,6 +3,9 @@ import SendToken from "./components/SendToken";
 import SendApp from "./components/SendApp";
 import { Emojis } from "./emojis";
 import { ScrollTo } from "./components/ScrollTo";
+import SendTokenLogo from "./components/logos/SendTokenLogo";
+import ClickMeOrBounce from "./components/util/ClickMonitor";
+import SendAppLogo from "./components/logos/SendAppLogo";
 
 export default function Home() {
   return (
@@ -21,35 +24,41 @@ export default function Home() {
         <div className="relative flex flex-col h-full">
           {/* <div className=" before:absolute before:h-[500px] before:w-[780px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[560px] after:w-[540px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[490px]" /> */}
           <div className="w-full md:max-w-md bg-black bg-opacity-50 justify-center flex flex-col gap-2">
-            <ScrollTo id="sendtoken">
-              <p className="text-center font-thin group flex justify-center">
-                <Image
-                  src="/img/logos/S_greentransparent.png"
-                  width={150}
-                  height={150}
-                  alt="Send App"
-                />
-              </p>
-            </ScrollTo>
+            <ClickMeOrBounce>
+              <ScrollTo id="sendtoken">
+                <div className="group text-center font-thin group flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                  <SendTokenLogo />
+                  <div className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out absolute bottom-4">
+                    <p className="text-xs font-thin text-primary">send it</p>
+                  </div>
+                </div>
+              </ScrollTo>
+            </ClickMeOrBounce>
 
-            <p className="font-thin font-mono ">Contract address: soon</p>
+            <p className="font-thin font-sans ">
+              it&apos;s not the size, it&apos;s how you send it
+            </p>
 
-            <ScrollTo id="sendapp">
-              <p className="text-center font-thin group flex justify-center">
-                <Image
-                  src="/img/logos/S_whitetransparent.png"
-                  width={150}
-                  height={150}
-                  alt="Send App"
-                />
-              </p>
-            </ScrollTo>
+            <ClickMeOrBounce>
+              <ScrollTo id="sendapp">
+                <div className="group text-center font-thin group flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                  <SendAppLogo />
+                  <div className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out absolute bottom-4">
+                    <p className="text-xs font-thin text-white">send it</p>
+                  </div>
+                </div>
+              </ScrollTo>
+            </ClickMeOrBounce>
           </div>
         </div>
         <div className="">
           <div className="absolute bottom-0 right-6 flex gap-4 items-center">
             <div className="flex justify-center gap-4 mb-8">
-              <a href="https://t.co/hr2OkXj0eZ" className="">
+              <a
+                href="https://t.co/hr2OkXj0eZ"
+                className=""
+                title="Send Telegram"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -63,7 +72,7 @@ export default function Home() {
                   />
                 </svg>
               </a>
-              <a href="https://twitter.com/0xSend_" className="">
+              <a href="https://twitter.com/0xSend_" className="Send Twitter">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -85,18 +94,18 @@ export default function Home() {
 
         <SendToken />
 
-        <div className="absolute bottom-4">
+        <div className="pt-24" />
+
+        <ClickMeOrBounce>
           <ScrollTo id="sendapp">
-            <p className="text-center font-thin group flex justify-center">
-              <Image
-                src="/img/logos/S_whitetransparent.png"
-                width={150}
-                height={150}
-                alt="Send App"
-              />
-            </p>
+            <div className="group text-center font-thin group flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+              <SendAppLogo />
+              <div className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out absolute bottom-4">
+                <p className="text-xs font-thin text-white">send it</p>
+              </div>
+            </div>
           </ScrollTo>
-        </div>
+        </ClickMeOrBounce>
       </div>
 
       <div className="relative flex flex-col items-center z-10 bg-black bg-opacity-50 min-h-screen">

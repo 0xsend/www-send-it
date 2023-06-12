@@ -2,27 +2,14 @@
 
 import { ReactElement, useEffect, useState } from "react";
 import tailwindConfig from "../../tailwind.config.js";
-import Image from "next/image.js";
+import SendAppLogo from "./components/logos/SendAppLogo";
+import SendTokenLogo from "./components/logos/SendTokenLogo";
 
 type EmojiContent = string | ReactElement;
 
-const sendAppLogo = (
-  <Image
-    src="/img/logos/S_whitetransparent.png"
-    width={50}
-    height={50}
-    alt="Send App"
-  />
-);
+const sendAppLogo = <SendAppLogo className="w-16 h-16" />;
 
-const sendTokenLogo = (
-  <Image
-    src="/img/logos/S_greentransparent.png"
-    width={50}
-    height={50}
-    alt="Send Token"
-  />
-);
+const sendTokenLogo = <SendTokenLogo className="w-16 h-16" />;
 
 const ethLogo = (
   <svg viewBox="0 0 115 182" className="w-6">

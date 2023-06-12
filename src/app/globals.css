@@ -9,6 +9,18 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
+
+  --color-primary: #46dd11;
+  --color-primary-50: #e6f9e6;
+  --color-primary-100: #d0f3d0;
+  --color-primary-200: #a0e7a0;
+  --color-primary-300: #70db70;
+  --color-primary-400: #40cf40;
+  --color-primary-500: #46dd11;
+  --color-primary-600: #1ebd00;
+  --color-primary-700: #1a9a00;
+  --color-primary-800: #156700;
+  --color-primary-900: #104400;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,5 +70,10 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #46dd11; /* slightly darker thumb when hovered */
+  background: var(--color-primary-300); /* slightly darker thumb when hovered */
+}
+
+*::selection {
+  background: var(--color-primary-300);
+  color: #000;
 }

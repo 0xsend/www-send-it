@@ -35,7 +35,7 @@ function SendApp() {
   return (
     <div className="w-full md:max-w-lg bg-black bg-opacity-50 justify-center px-6 md:px-0">
       <h2 className="text-2xl sm:text-4xl font-semibold text-center font-serif mb-24">
-        📒 Send App
+        📱 Send App
       </h2>
 
       {phases.map((phase, index) => (

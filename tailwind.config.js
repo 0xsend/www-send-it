@@ -29,17 +29,17 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#46DD11",
-          50: "#E6F9E6",
-          100: "#D0F3D0",
-          200: "#A0E7A0",
-          300: "#70DB70",
-          400: "#40CF40",
-          500: "#46DD11",
-          600: "#1EBD00",
-          700: "#1A9A00",
-          800: "#156700",
-          900: "#104400",
+          DEFAULT: "var(--color-primary)",
+          50: "var(--color-primary-50)",
+          100: "var(--color-primary-100)",
+          200: "var(--color-primary-200)",
+          300: "var(--color-primary-300)",
+          400: "var(--color-primary-400)",
+          500: "var(--color-primary-500)",
+          600: "var(--color-primary-600)",
+          700: "var(--color-primary-700)",
+          800: "var(--color-primary-800)",
+          900: "var(--color-primary-900)",
         },
         secondary: {
           DEFAULT: "#F3DB33",
