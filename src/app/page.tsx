@@ -1,7 +1,6 @@
 import Image from "next/image";
 import SendToken from "./components/SendToken";
 import SendApp from "./components/SendApp";
-import { ScrollToSendApp } from "./components/ScrollToSendApp";
 import { Emojis } from "./emojis";
 import { ScrollTo } from "./components/ScrollTo";
 
