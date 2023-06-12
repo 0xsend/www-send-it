@@ -1,6 +1,6 @@
 "use client";
 
-export function ScrollTo({
+export default function ScrollTo({
   id,
   children,
 }: {

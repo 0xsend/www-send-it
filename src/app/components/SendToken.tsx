@@ -90,7 +90,7 @@ function SendToken() {
           <strong>Decimals:</strong> 0
         </li>
         <li>
-          <strong>Ticker:</strong> 0
+          <strong>Ticker:</strong> $send
         </li>
       </ul>
       <div className="mb-8" />
@@ -98,7 +98,7 @@ function SendToken() {
       <ul className="list-disc list-inside mb-6">
         {allotment.map((item, index) => (
           <li key={index}>
-            <strong>{item.category}:</strong> {item.percentage} - {item.amount}
+            {item.category}: {item.percentage} - {item.amount}
           </li>
         ))}
       </ul>

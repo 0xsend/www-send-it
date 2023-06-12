@@ -2,7 +2,7 @@ import Image from "next/image";
 import SendToken from "./components/SendToken";
 import SendApp from "./components/SendApp";
 import { Emojis } from "./emojis";
-import { ScrollTo } from "./components/ScrollTo";
+import ScrollTo from "./components/util/ScrollTo";
 import SendTokenLogo from "./components/logos/SendTokenLogo";
 import ClickMeOrBounce from "./components/util/ClickMonitor";
 import SendAppLogo from "./components/logos/SendAppLogo";
