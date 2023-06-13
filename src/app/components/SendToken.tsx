@@ -55,17 +55,17 @@ function getDistributionSchedule(start: Date, totalDistributions: number) {
 
 function SendToken() {
   const allotment = [
-    { category: "Contributors", percentage: "10%", amount: "10b" },
     { category: "Team", percentage: "10%", amount: "10b" },
+    { category: "Treasury", percentage: "19.86%", amount: "19.86b" },
+    { category: "Contributors", percentage: "10%", amount: "10b" },
+    { category: "Distributions", percentage: "20%", amount: "20b" },
     { category: "Multisig Signers", percentage: ".14%", amount: "140m" },
+    { category: "Dex n Cex Listings", percentage: "30%", amount: "30b" },
     {
       category: "Community Contributor Incentives",
       percentage: "10%",
       amount: "10b",
     },
-    { category: "Distributions", percentage: "20%", amount: "20b" },
-    { category: "Dex n Cex Listings", percentage: "30%", amount: "30b" },
-    { category: "Treasury", percentage: "19.86%", amount: "19.86b" },
   ];
 
   const distributionSchedule = getDistributionSchedule(

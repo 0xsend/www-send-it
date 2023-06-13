@@ -6,6 +6,7 @@ import ScrollTo from "./components/util/ScrollTo";
 import SendTokenLogo from "./components/logos/SendTokenLogo";
 import ClickMeOrBounce from "./components/util/ClickMonitor";
 import SendAppLogo from "./components/logos/SendAppLogo";
+import SendLogo from "./components/logos/SendLogo";
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
           </div>
 
           <h1 className="text-4xl sm:text-6xl mb-6 font-semibold text-left absolute left-6 top-6 p-2 bg-black bg-opacity-50 z-10">
-            Send
+            <SendLogo />
+            <span className="sr-only">Send</span>
           </h1>
         </div>
 

@@ -4,8 +4,11 @@ import { ReactElement, useEffect, useState } from "react";
 import tailwindConfig from "../../tailwind.config.js";
 import SendAppLogo from "./components/logos/SendAppLogo";
 import SendTokenLogo from "./components/logos/SendTokenLogo";
+import SendLogo from "./components/logos/SendLogo";
 
 type EmojiContent = string | ReactElement;
+
+const sendLogo = <SendLogo className="w-16" />;
 
 const sendAppLogo = <SendAppLogo className="w-16 h-16" />;
 
@@ -136,9 +139,10 @@ const phrases: EmojiContent[] = [
   "Giga-Send",
   "F*** Ben, Send to a fren",
   "It's not the size it's how you Send it",
-  ...Array(40).fill(ethLogo), // Add f-ton eth logos
+  ...Array(30).fill(ethLogo), // Add f-ton eth logos
   ...Array(20).fill(sendAppLogo),
   ...Array(20).fill(sendTokenLogo),
+  ...Array(20).fill(sendLogo),
 ];
 
 const colors = tailwindConfig.emojiColors;
