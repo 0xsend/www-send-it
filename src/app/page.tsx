@@ -74,7 +74,7 @@ export default function Home() {
                   />
                 </svg>
               </a>
-              <a href="https://twitter.com/0xSend_" className="Send Twitter">
+              <a href="https://twitter.com/sendit_eth" className="Send Twitter">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
