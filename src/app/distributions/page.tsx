@@ -23,7 +23,7 @@ export default function Distributions() {
           </div>
         </div>
 
-        <div className="sm:absolute w-full sm:w-1/2 sm:h-full h-96 right-0 sm:bg-gradient-to-l bg-gradient-to-t from-primary opacity-75"></div>
+        <div className="sm:absolute w-full sm:w-1/2 sm:h-full h-96 right-0 sm:bg-gradient-to-l bg-gradient-to-t from-primary opacity-75 z-0"></div>
       </div>
     </main>
   );
