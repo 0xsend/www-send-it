@@ -17,10 +17,12 @@ export default function Home() {
             <Emojis />
           </div>
 
-          <h1 className="text-4xl sm:text-6xl mb-6 font-semibold text-left absolute left-6 top-6 p-2 bg-black bg-opacity-50 z-10">
-            <SendLogo />
-            <span className="sr-only">Send</span>
-          </h1>
+          <a href="/" title="Send">
+            <h1 className="text-4xl sm:text-6xl mb-6 font-semibold text-left absolute left-6 top-6 p-2 bg-black bg-opacity-50 z-10">
+              <SendLogo />
+              <span className="sr-only">Send</span>
+            </h1>
+          </a>
         </div>
 
         <div className="relative flex flex-col h-full">
