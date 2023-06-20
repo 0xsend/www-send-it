@@ -57,7 +57,7 @@ export default function Home() {
           <div className="absolute bottom-0 right-6 flex gap-4 items-center">
             <div className="flex justify-center gap-4 mb-8">
               <a
-                href="https://t.co/hr2OkXj0eZ"
+                href="https://t.me/senditapp"
                 className=""
                 title="Send Telegram"
               >
