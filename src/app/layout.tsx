@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${poppins.variable} ${sourceCodePro.variable} ${inter.variable}`}
+      className={`dark antialiased ${poppins.variable} ${sourceCodePro.variable} ${inter.variable}`}
     >
       <body>{children}</body>
     </html>

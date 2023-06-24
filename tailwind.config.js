@@ -42,30 +42,30 @@ module.exports = {
           900: "var(--color-primary-900)",
         },
         secondary: {
-          DEFAULT: "#F3DB33",
-          50: "#FFFFFF",
-          100: "#FFFFFF",
-          200: "#FFFFFF",
-          300: "#FFFFFF",
-          400: "#FFF9E6",
-          500: "#F3DB33",
-          600: "#E6C666",
-          700: "#D9B999",
-          800: "#CCADCC",
-          900: "#BF9FFF",
+          DEFAULT: "var(--color-secondary)",
+          50: "var(--color-secondary-50)",
+          100: "var(--color-secondary-100)",
+          200: "var(--color-secondary-200)",
+          300: "var(--color-secondary-300)",
+          400: "var(--color-secondary-400)",
+          500: "var(--color-secondary-500)",
+          600: "var(--color-secondary-600)",
+          700: "var(--color-secondary-700)",
+          800: "var(--color-secondary-800)",
+          900: "var(--color-secondary-900)",
         },
         tertiary: {
-          DEFAULT: "#FF6161",
-          50: "#FFFFFF",
-          100: "#FFFFFF",
-          200: "#FFFFFF",
-          300: "#FFFFFF",
-          400: "#FFC2C2",
-          500: "#FF6161",
-          600: "#FF2F2F",
-          700: "#FF0000",
-          800: "#CC0000",
-          900: "#990000",
+          DEFAULT: "var(--color-tertiary)",
+          50: "var(--color-tertiary-50)",
+          100: "var(--color-tertiary-100)",
+          200: "var(--color-tertiary-200)",
+          300: "var(--color-tertiary-300)",
+          400: "var(--color-tertiary-400)",
+          500: "var(--color-tertiary-500)",
+          600: "var(--color-tertiary-600)",
+          700: "var(--color-tertiary-700)",
+          800: "var(--color-tertiary-800)",
+          900: "var(--color-tertiary-900)",
         },
       },
       backgroundImage: {
@@ -80,6 +80,40 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
   emojiColors: emojiColors,
+
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
+          primary: "#46dd11",
+
+          secondary: "#f3db33",
+
+          accent: "#ff6161",
+
+          neutral: "#2b3440",
+
+          "base-100": "#2b3440",
+
+          info: "#bf9fff",
+
+          success: "#36d399",
+
+          warning: "#fbbd23",
+
+          error: "#f87272",
+        },
+      },
+    ], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
+    darkTheme: "mytheme", // name of one of the included themes for dark mode
+    base: true, // applies background color and foreground color for root element by default
+    styled: true, // include daisyUI colors and design decisions for all components
+    utils: true, // adds responsive and modifier utility classes
+    rtl: false, // rotate style direction from left-to-right to right-to-left. You also need to add dir="rtl" to your html tag and install `tailwindcss-flip` plugin for Tailwind CSS.
+    prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
+    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
+  },
 };

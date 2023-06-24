@@ -208,26 +208,29 @@ export const Emojis = () => {
   const [started, setStarted] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (!started) {
-        setStarted(true);
-      }
-      setEmojis((prevEmojis) => [
-        // ...prevEmojis,
-        ...prevEmojis.filter(
-          (emoji) => Date.now() - emoji.started < emoji.duration * 1000
-        ),
-        {
-          id: Math.random(), // Unique id for key prop
-          content: getRandomContent(),
-          left: getRandomLeftPosition(),
-          rotation: getRandomRotation(),
-          color: getRandomColor(),
-          duration: getRandomDuration(),
-          started: Date.now(),
-        },
-      ]);
-    }, 1000); // New emoji every second
+    const interval = setInterval(
+      () => {
+        if (!started) {
+          setStarted(true);
+        }
+        setEmojis((prevEmojis) => [
+          // ...prevEmojis,
+          ...prevEmojis.filter(
+            (emoji) => Date.now() - emoji.started < emoji.duration * 1000
+          ),
+          {
+            id: Math.random(), // Unique id for key prop
+            content: getRandomContent(),
+            left: getRandomLeftPosition(),
+            rotation: getRandomRotation(),
+            color: getRandomColor(),
+            duration: getRandomDuration(),
+            started: Date.now(),
+          },
+        ]);
+      },
+      process.env.NODE_ENV === "production" ? 1000 : 5000
+    ); // New emoji every second
 
     return () => clearInterval(interval);
   }, [started]);
