@@ -13,8 +13,8 @@ import SendTimeline from "./components/SendTimeline";
 const SendArrowDown = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="44"
+    height="44"
     viewBox="0 0 24 24"
     className={className}
   >
@@ -120,6 +120,14 @@ export default function Home() {
         <div id="sendhappenings" className="py-24"></div>
 
         <SendTimeline />
+      </div>
+
+      <div className="flex flex-col w-full items-center mt-24">
+        <ClickMeOrBounce>
+          <ScrollTo id="sendtoken">
+            <SendArrowDown />
+          </ScrollTo>
+        </ClickMeOrBounce>
       </div>
 
       <div className="relative flex flex-col items-center z-10 bg-black bg-opacity-50 min-h-screen">
