@@ -7,6 +7,23 @@ import SendTokenLogo from "./components/logos/SendTokenLogo";
 import ClickMeOrBounce from "./components/util/ClickMonitor";
 import SendAppLogo from "./components/logos/SendAppLogo";
 import SendLogo from "./components/logos/SendLogo";
+import SendTimeline from "./components/SendTimeline";
+
+// should prob be in a util file
+const SendArrowDown = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    className={className}
+  >
+    <path
+      fill="currentColor"
+      d="M11 4h2v12h2v2h-2v2h-2v-2H9v-2h2V4zM7 14v2h2v-2H7zm0 0v-2H5v2h2zm10 0v2h-2v-2h2zm0 0v-2h2v2h-2z"
+    />
+  </svg>
+);
 
 export default function Home() {
   return (
@@ -91,6 +108,18 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <ClickMeOrBounce>
+          <ScrollTo id="sendhappenings">
+            <SendArrowDown />
+          </ScrollTo>
+        </ClickMeOrBounce>
+      </div>
+
+      <div className="relative flex flex-col items-center z-10 bg-black bg-opacity-50 min-h-screen">
+        <div id="sendhappenings" className="py-24"></div>
+
+        <SendTimeline />
       </div>
 
       <div className="relative flex flex-col items-center z-10 bg-black bg-opacity-50 min-h-screen">
