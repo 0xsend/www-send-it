@@ -74,14 +74,17 @@ function SendToken() {
   ); // starting from July 1, 2023
 
   return (
-    <div className="w-full md:max-w-lg bg-black bg-opacity-50 justify-center px-6 md:px-0">
+    <div className="w-full md:max-w-2xl bg-black bg-opacity-50 justify-center px-6 md:px-0">
       <h2 className="text-2xl sm:text-4xl font-semibold text-center font-serif mb-24">
         🪙 Send Token
       </h2>
       <h3 className="text-xl sm:text-2xl mb-6 font-semibold">Details</h3>
       <ul className="list-disc list-inside mb-6">
         <li>
-          <strong>Contract Address:</strong> soon
+          <strong>Contract Address:</strong>{" "}
+          <span className="font-mono">
+            0x3f14920c99BEB920Afa163031c4e47a3e03B3e4A
+          </span>
         </li>
         <li>
           <strong>Supply:</strong> 100,000,000,000
