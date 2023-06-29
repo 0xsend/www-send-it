@@ -82,6 +82,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Send Happenings */}
       <div className="relative flex flex-col items-center z-10 bg-black bg-opacity-50 min-h-screen">
         <div id="sendhappenings" className="py-24"></div>
 
@@ -96,6 +97,7 @@ export default function Home() {
         </ClickMeOrBounce>
       </div>
 
+      {/* Send Token */}
       <div className="relative flex flex-col items-center z-10 bg-black bg-opacity-50 min-h-screen">
         <div id="sendtoken" className="py-24"></div>
 
@@ -115,12 +117,14 @@ export default function Home() {
         </ClickMeOrBounce>
       </div>
 
+      {/* Send App */}
       <div className="relative flex flex-col items-center z-10 bg-black bg-opacity-50 min-h-screen">
         <div id="sendapp" className="py-24"></div>
 
         <SendApp />
       </div>
 
+      {/* Links */}
       <div className="relative z-10">
         <div className="fixed bottom-0 right-6 flex gap-4 items-center z-100">
           <div className="flex justify-center gap-4 mb-8">
@@ -138,7 +142,7 @@ export default function Home() {
                 />
               </svg>
             </a>
-            <a href="https://twitter.com/sendit_eth" title="Send Twitter">
+            <a href="https://go.send.it/twitter" title="Send Twitter">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -238,6 +242,32 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="">
+        <div className="max-w-7xl min-w-[320px] mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+          <nav
+            className="mx-2 md:-mx-5 -my-2 flex flex-wrap"
+            aria-label="Footer"
+          >
+            <a href="mailto:send@send.it">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="inline-block h-6 w-6 mr-2"
+              >
+                <path
+                  fill="currentColor"
+                  d="M22 5.5H9c-1.1 0-2 .9-2 2v9a2 2 0 0 0 2 2h13c1.11 0 2-.89 2-2v-9a2 2 0 0 0-2-2m0 11H9V9.17l6.5 3.33L22 9.17v7.33m-6.5-5.69L9 7.5h13l-6.5 3.31M5 16.5c0 .17.03.33.05.5H1c-.552 0-1-.45-1-1s.448-1 1-1h4v1.5M3 7h2.05c-.02.17-.05.33-.05.5V9H3c-.55 0-1-.45-1-1s.45-1 1-1m-2 5c0-.55.45-1 1-1h3v2H2c-.55 0-1-.45-1-1Z"
+                />
+              </svg>
+              send@send.it
+            </a>
+          </nav>
+        </div>
+      </footer>
     </main>
   );
 }
