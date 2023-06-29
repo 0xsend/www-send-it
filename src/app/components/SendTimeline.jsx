@@ -111,7 +111,7 @@ const happenings = [
   // Token Launch - Ongoing
   {
     title: "Token Launch",
-    date: "Ongoing",
+    date: "June 28th",
     description: "Soon",
   },
   // Send.it acquisition - June 9th
