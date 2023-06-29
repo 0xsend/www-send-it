@@ -82,10 +82,31 @@ function SendToken() {
       <ul className="list-disc list-inside mb-6">
         <li>
           <strong>Contract Address:</strong>{" "}
-          <a href="https://go.send.it/etherscan" title="Send Token Etherscan">
-            <span className="font-mono">
+          <a
+            href="https://go.send.it/etherscan"
+            title="Send Token Etherscan"
+            className="relative group"
+          >
+            <span className="font-mono inline-block align-bottom max-w-xs sm:max-w-none text-ellipsis overflow-hidden relative">
               0x3f14920c99BEB920Afa163031c4e47a3e03B3e4A
             </span>
+            <div className="absolute -top-4 -right-4 bg-black opacity-0 group-hover:opacity-100 transition-opacity group-hover:text-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4m-8-2l8-8m0 0v5m0-5h-5"
+                />
+              </svg>
+            </div>
           </a>
         </li>
         <li>
