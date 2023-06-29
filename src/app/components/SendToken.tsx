@@ -82,9 +82,11 @@ function SendToken() {
       <ul className="list-disc list-inside mb-6">
         <li>
           <strong>Contract Address:</strong>{" "}
-          <span className="font-mono">
-            0x3f14920c99BEB920Afa163031c4e47a3e03B3e4A
-          </span>
+          <a href="https://go.send.it/etherscan" title="Send Token Etherscan">
+            <span className="font-mono">
+              0x3f14920c99BEB920Afa163031c4e47a3e03B3e4A
+            </span>
+          </a>
         </li>
         <li>
           <strong>Supply:</strong> 100,000,000,000
