@@ -9,6 +9,7 @@ import SendAppLogo from "./components/logos/SendAppLogo";
 import SendLogo from "./components/logos/SendLogo";
 import SendTimeline from "./components/SendTimeline";
 import SendLinks from "./components/SendLinks";
+import { getTokenAmounts } from "@/lib/getTokenAmounts";
 
 // should prob be in a util file
 const SendArrowDown = ({ className }: { className?: string }) => (
@@ -26,7 +27,11 @@ const SendArrowDown = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export default function Home() {
+export const revalidate = 60; // revalidate this page every 60 seconds
+
+export default async function Home() {
+  const data = await getTokenAmounts();
+
   return (
     <main>
       <div className="absolute p-6 bg-black bg-opacity-50 z-10 flex justify-between items-center w-full">
@@ -118,7 +123,7 @@ export default function Home() {
       <div className="relative flex flex-col items-center z-10 bg-black bg-opacity-50 min-h-screen">
         <div id="sendtoken" className="py-24"></div>
 
-        <SendToken />
+        <SendToken total={data?.total} circulating={data?.circulating} />
 
         <div className="pt-24" />
 

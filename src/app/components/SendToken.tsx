@@ -1,3 +1,5 @@
+import type { SendTokenAmounts } from "@/lib/getTokenAmounts";
+
 function getMonthName(month: number) {
   switch (month) {
     case 0:
@@ -53,7 +55,7 @@ function getDistributionSchedule(start: Date, totalDistributions: number) {
   return schedule;
 }
 
-function SendToken() {
+function SendToken({ total, circulating }: SendTokenAmounts) {
   const allotment = [
     { category: "Team", percentage: "10%", amount: "10b" },
     { category: "Contributors", percentage: "10%", amount: "10b" },
@@ -72,6 +74,10 @@ function SendToken() {
     new Date(2023, 6, 1),
     10
   ); // starting from July 1, 2023
+
+  if (!total) {
+    total = 100e9;
+  }
 
   return (
     <div className="w-full md:max-w-2xl bg-black bg-opacity-50 justify-center px-6 md:px-0">
@@ -110,8 +116,13 @@ function SendToken() {
           </a>
         </li>
         <li>
-          <strong>Supply:</strong> 100,000,000,000
+          <strong>Total:</strong> {total.toLocaleString()}
         </li>
+        {circulating && (
+          <li>
+            <strong>Circulating:</strong> {circulating.toLocaleString()}
+          </li>
+        )}
         <li>
           <strong>Decimals:</strong> 0
         </li>
