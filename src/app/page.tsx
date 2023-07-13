@@ -35,7 +35,11 @@ export default async function Home() {
   return (
     <main>
       <div className="absolute p-6 bg-black bg-opacity-50 z-10 flex justify-between items-center w-full">
-        <a href="/" title="Send" className="flex flex-col">
+        <a
+          href="/"
+          title="Send"
+          className="flex flex-col group hover:fill-primary-500"
+        >
           <SendLogo />
         </a>
 
