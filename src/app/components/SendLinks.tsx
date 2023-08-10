@@ -1,8 +1,24 @@
 export default function SendLinks() {
   return (
     <div className="relative z-10">
-      <div className="fixed bottom-0 right-6 flex gap-4 items-center z-100">
+      <div className="w-100 flex gap-4 items-center z-100">
         <div className="flex justify-center gap-4 mb-8">
+          <a
+            href="https://info.send.it"
+            title="Send Info"
+            className="hover:text-primary text-xl justify-self-end"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              className="w-8 h-8 md:w-12 md:h-12 hover:text-primary-500 dark:hover:text-primary-300"
+            >
+              <path
+                fill="currentColor"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2a1 1 0 0 1 0 2Z"
+              />
+            </svg>
+          </a>
           <a href="https://go.send.it/tg" className="" title="Send Telegram">
             <svg
               xmlns="http://www.w3.org/2000/svg"
