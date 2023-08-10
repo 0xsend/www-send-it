@@ -10,9 +10,9 @@ type EmojiContent = string | ReactElement;
 
 const sendLogo = <SendLogo className="w-16" />;
 
-const sendAppLogo = <SendAppLogo className="w-16 h-16" />;
+// const sendAppLogo = <SendAppLogo className="w-16 h-16" />;
 
-const sendTokenLogo = <SendTokenLogo className="w-16 h-16" />;
+// const sendTokenLogo = <SendTokenLogo className="w-16 h-16" />;
 
 const ethLogo = (
   <svg viewBox="0 0 115 182" className="w-6">
@@ -140,8 +140,8 @@ const phrases: EmojiContent[] = [
   "F*** Ben, Send to a fren",
   "It's not the size it's how you Send it",
   ...Array(30).fill(ethLogo), // Add f-ton eth logos
-  ...Array(20).fill(sendAppLogo),
-  ...Array(20).fill(sendTokenLogo),
+  // ...Array(20).fill(sendAppLogo),
+  // ...Array(20).fill(sendTokenLogo),
   ...Array(20).fill(sendLogo),
 ];
 
