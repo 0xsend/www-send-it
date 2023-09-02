@@ -10,11 +10,11 @@
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
 
-  --color-primary: #46dd11;
+  --color-primary: #dac5a5;
   --color-primary-50: #e6f9e6;
   --color-primary-100: #d0f3d0;
   --color-primary-200: #a0e7a0;
-  --color-primary-300: #70db70;
+  --color-primary-300: #dac5a5;
   --color-primary-400: #40cf40;
   --color-primary-500: var(--color-primary);
   --color-primary-600: #1ebd00;
