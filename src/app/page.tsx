@@ -56,7 +56,6 @@ export default async function Home() {
       <div className="dark flex min-h-screen flex-col items-center justify-between p-8 sm:p-24">
         <div className="w-full">
           <div className="relative inset-0 h-100 w-100">
-            <Emojis />
           </div>
         </div>
 
