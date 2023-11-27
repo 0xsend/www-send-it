@@ -19,7 +19,7 @@ export default function SendLinks() {
               />
             </svg>
           </a>
-          <a href="https://go.send.it/tg" className="" title="Send Telegram">
+          {/* <a href="https://go.send.it/tg" className="" title="Send Telegram">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -32,7 +32,7 @@ export default function SendLinks() {
                 clipRule="evenodd"
               />
             </svg>
-          </a>
+          </a> */}
           <a href="https://x.com/send" title="Send X">
             <svg
               viewBox="0 0 24 24"
