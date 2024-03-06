@@ -102,7 +102,7 @@ export default function SendLinks() {
               xmlns="http://www.w3.org/2000/svg"
               className="w-8 h-8 md:w-12 md:h-12 hover:text-primary-500 dark:hover:text-primary-300"
             >
-              <g clip-path="url(#clip0_3340_1163)">
+              <g clipPath="url(#clip0_3340_1163)">
                 <mask
                   id="mask0_3340_1163"
                   style={{ maskType: "luminance" }}
