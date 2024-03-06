@@ -33,8 +33,8 @@ export default async function Home() {
 
   return (
     <main>
-      <div className="absolute p-6 bg-black bg-opacity-50 z-10 flex justify-between items-center w-full">
-        {/* <a
+      {/* <div className="absolute p-6 bg-black bg-opacity-50 z-10 flex justify-between items-center w-full">
+        <a
           href="https://info.send.it"
           title="Send Info"
           className="hover:text-primary text-xl justify-self-end"
@@ -50,15 +50,15 @@ export default async function Home() {
               d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2a1 1 0 0 1 0 2Z"
             />
           </svg>
-        </a> */}
-      </div>
-      <div className="dark flex min-h-screen flex-col items-center justify-between p-8 sm:p-24">
-        <div className="w-full">
+        </a> 
+      </div> */}
+      <div className="dark flex min-h-[100vh] flex-col items-center p-8 sm:p-24">
+        {/* <div className="w-full">
           <div className="relative inset-0 h-100 w-100">
           </div>
-        </div>
+        </div> */}
 
-        <div className="relative flex flex-col h-full">
+        <div className="relative flex flex-col flex-grow justify-center">
           {/* <div className=" before:absolute before:h-[500px] before:w-[780px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[560px] after:w-[540px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[490px]" /> */}
           <a
             href="https://app.send.it/"
@@ -69,7 +69,7 @@ export default async function Home() {
           </a>
         </div>
 
-        <div className="relative bottom-0 sm:bottom-0 flex flex-col items-center">
+        <div className="relative flex flex-col items-center">
           {/*  <ClickMeOrBounce>
             <ScrollTo id="sendhappenings">
               <SendArrowDown />
