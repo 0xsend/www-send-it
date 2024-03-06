@@ -69,13 +69,15 @@ export default async function Home() {
           </a>
         </div>
 
-        <div className="relative bottom-0 sm:bottom-0">
+        <div className="relative bottom-0 sm:bottom-0 flex flex-col items-center">
           {/*  <ClickMeOrBounce>
             <ScrollTo id="sendhappenings">
               <SendArrowDown />
             </ScrollTo>
           </ClickMeOrBounce> */}
           <SendLinks />
+          <a className="text-xs sm:text-base underline" href="mailto:send@send.it">send@send.it</a>
+          <p className="text-xs sm:text-base mt-4">0x3f14920c99BEB920Afa163031c4e47a3e03B3e4A</p>
         </div>
       </div>
 

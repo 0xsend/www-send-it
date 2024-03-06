@@ -20,7 +20,7 @@ const sourceCodePro = Source_Code_Pro({
 });
 
 export const metadata = {
-  title: "Send",
+  title: "/send",
   description: "It's not the size, it's how you Send it",
   metadataBase: new URL("https://send.it/"),
 };
