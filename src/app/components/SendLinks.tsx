@@ -7,6 +7,7 @@ export default function SendLinks() {
             href="https://info.send.it"
             title="Send Info"
             className="hover:text-primary text-xl justify-self-end"
+            target="_blank"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +34,7 @@ export default function SendLinks() {
               />
             </svg>
           </a> */}
-          <a href="https://x.com/send" title="Send X">
+          <a href="https://x.com/send" title="Send X" target="_blank">
             <svg
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -47,7 +48,7 @@ export default function SendLinks() {
               </g>
             </svg>
           </a>
-          <a href="https://send.app" title="Send Token CoinGecko">
+          <a href="https://send.app" title="Send Token CoinGecko" target="_blank">
             <svg
               viewBox="0 0 157 183"
               fill="none"
@@ -61,7 +62,7 @@ export default function SendLinks() {
               />
             </svg>
           </a>
-          <a href="https://go.send.it/cg" title="Send Token CoinGecko">
+          <a href="https://go.send.it/cg" title="Send Token CoinGecko" target="_blank">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +110,7 @@ export default function SendLinks() {
               </g>
             </svg>
           </a>
-          <a href="https://go.send.it/etherscan" title="Send Token Etherscan">
+          <a href="https://go.send.it/etherscan" title="Send Token Etherscan" target="_blank">
             <svg
               viewBox="0 0 123 123"
               fill="none"
